@@ -1,0 +1,23 @@
+# --- Web framework ---
+fastapi
+uvicorn[standard]   # for live reload, websockets, etc.
+
+# --- Computer vision ---
+opencv-python       # use this on laptop with GUI
+
+# --- AI/ML (PyTorch + YOLOv8) ---
+torch
+torchvision
+ultralytics         # YOLOv8 package
+
+# --- Utilities ---
+numpy
+pandas
+python-multipart    # for file uploads
+pydantic
+requests            # helpful for API calls
+
+# --- Optional ---
+psutil              # monitor CPU/GPU usage
+python-dotenv
+mediapipe

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exam Guard Dashboard</title>
+</head>
+<body>
+  <h1>Exam Guard</h1>
+  <div>
+    <img src="/stream/0" width="480">
+  </div>
+  <h2>Alerts:</h2>
+  <ul id="alerts"></ul>
+
+  <script>
+    let ws = new WebSocket("ws://" + location.host + "/ws");
+    ws.onmessage = (e) => {
+      let li = document.createElement("li");
+      li.innerText = e.data;
+      document.getElementById("alerts").appendChild(li);
+    };
+  </script>
+</body>
+</html>
